@@ -46,7 +46,7 @@ final class EffinArchitectureTests: XCTestCase {
         stack.service.fetchWithError = true
         await stack.sut.loadData()
         let states = await stack.view.states
-        XCTAssertEqual(states, [.loading, .error("The operation couldn’t be completed. (error error 0.)")])
+        XCTAssertEqual(states, [.loading, .error(NSError.anyError().localizedDescription)])
         XCTAssertEqual(stack.dependency.someAsyncMethodCallCount, 0)
     }
 }
@@ -78,9 +78,13 @@ final class NetworkServiceMock: NetworkService {
     var fetchWithError = false
     override func fetchData() async throws -> [String] {
         if fetchWithError {
-            throw NSError(domain: "error", code: 0)
+            throw NSError.anyError()
         } else {
             return ["hello world"]
         }
     }
+}
+
+extension NSError {
+    static func anyError() -> NSError { NSError(domain: "error", code: 0) }
 }

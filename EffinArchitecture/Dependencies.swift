@@ -7,6 +7,7 @@
 
 import Foundation
 
+/// A class dependency, mocked through inheritance
 class NetworkService {
     func fetchData() async throws -> [String] {
         try await Task.sleep(seconds: 3)
@@ -14,6 +15,7 @@ class NetworkService {
     }
 }
 
+/// A protocol dependency, mocked through conformance
 final class OtherDependency: OtherDependencyProtocol {}
 
 protocol OtherDependencyProtocol {

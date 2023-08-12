@@ -14,7 +14,7 @@
 		FB43C0C92A87009100861717 /* EffinArchitecture.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FB43C0C72A87009100861717 /* EffinArchitecture.xcdatamodeld */; };
 		FB43C0CB2A87009200861717 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FB43C0CA2A87009200861717 /* Assets.xcassets */; };
 		FB43C0CE2A87009200861717 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FB43C0CC2A87009200861717 /* LaunchScreen.storyboard */; };
-		FB43C0D92A87009200861717 /* EffinArchitectureTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB43C0D82A87009200861717 /* EffinArchitectureTests.swift */; };
+		FB43C0D92A87009200861717 /* ViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB43C0D82A87009200861717 /* ViewControllerTests.swift */; };
 		FB43C0E32A87009200861717 /* EffinArchitectureUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB43C0E22A87009200861717 /* EffinArchitectureUITests.swift */; };
 		FB43C0E52A87009200861717 /* EffinArchitectureUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB43C0E42A87009200861717 /* EffinArchitectureUITestsLaunchTests.swift */; };
 		FB43C0F22A87A3C100861717 /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB43C0F12A87A3C100861717 /* View.swift */; };
@@ -50,7 +50,7 @@
 		FB43C0CD2A87009200861717 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FB43C0CF2A87009200861717 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FB43C0D42A87009200861717 /* EffinArchitectureTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EffinArchitectureTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		FB43C0D82A87009200861717 /* EffinArchitectureTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EffinArchitectureTests.swift; sourceTree = "<group>"; };
+		FB43C0D82A87009200861717 /* ViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerTests.swift; sourceTree = "<group>"; };
 		FB43C0DE2A87009200861717 /* EffinArchitectureUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EffinArchitectureUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB43C0E22A87009200861717 /* EffinArchitectureUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EffinArchitectureUITests.swift; sourceTree = "<group>"; };
 		FB43C0E42A87009200861717 /* EffinArchitectureUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EffinArchitectureUITestsLaunchTests.swift; sourceTree = "<group>"; };
@@ -125,7 +125,7 @@
 		FB43C0D72A87009200861717 /* EffinArchitectureTests */ = {
 			isa = PBXGroup;
 			children = (
-				FB43C0D82A87009200861717 /* EffinArchitectureTests.swift */,
+				FB43C0D82A87009200861717 /* ViewControllerTests.swift */,
 			);
 			path = EffinArchitectureTests;
 			sourceTree = "<group>";
@@ -284,7 +284,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FB43C0D92A87009200861717 /* EffinArchitectureTests.swift in Sources */,
+				FB43C0D92A87009200861717 /* ViewControllerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

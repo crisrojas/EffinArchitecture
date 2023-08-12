@@ -1,6 +1,6 @@
 //
-//  EffinArchitectureTests.swift
-//  EffinArchitectureTests
+//  ViewControllerTests.swift
+//  ViewControllerTests
 //
 //  Created by Cristian Patiño Rojas on 12/8/23.
 //
@@ -9,7 +9,7 @@ import XCTest
 @testable import EffinArchitecture
 
 
-final class EffinArchitectureTests: XCTestCase {
+final class ViewControllerTests: XCTestCase {
 
     typealias SUTStack = (
         sut: ViewController,

@@ -59,14 +59,7 @@ class View: UIView {
     func setupView() {
         backgroundColor = .white
         tableView.setOwner(self)
-        addSubview(tableView)
-        NSLayoutConstraint.activate([
-            tableView.topAnchor.constraint(equalTo: topAnchor),
-            tableView.bottomAnchor.constraint(equalTo: bottomAnchor),
-            tableView.trailingAnchor.constraint(equalTo: trailingAnchor),
-            tableView.leadingAnchor.constraint(equalTo: leadingAnchor)
-        ])
-        
+        tableView.pinToEdges(of: self)
         loaderView.center(in: self)
         errorView.center(in: self)
     }

@@ -15,6 +15,16 @@ extension UIView {
             self.centerYAnchor.constraint(equalTo: view.centerYAnchor)
         ])
     }
+    
+    func pinToEdges(of view: UIView) {
+        view.addSubview(self)
+        NSLayoutConstraint.activate([
+            self.topAnchor.constraint(equalTo: view.topAnchor),
+            self.bottomAnchor.constraint(equalTo: view.bottomAnchor),
+            self.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            self.leadingAnchor.constraint(equalTo: view.leadingAnchor)
+        ])
+    }
 }
 
 /// Owner of the tableView. Responsable to trigger its callbacks and provide dataSource

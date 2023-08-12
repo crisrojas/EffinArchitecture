@@ -35,11 +35,19 @@ final class EffinArchitectureTests: XCTestCase {
         stack = nil
     }
     
-    func testExample() async throws {
+    func test_loadData_success() async throws {
         await stack.sut.loadData()
         let states = await stack.view.states
         XCTAssertEqual(states, [.loading, .success(["hello world"])])
         XCTAssertEqual(stack.dependency.someAsyncMethodCallCount, 1)
+    }
+    
+    func test_loadData_error() async throws {
+        stack.service.fetchWithError = true
+        await stack.sut.loadData()
+        let states = await stack.view.states
+        XCTAssertEqual(states, [.loading, .error("The operation couldn’t be completed. (error error 0.)")])
+        XCTAssertEqual(stack.dependency.someAsyncMethodCallCount, 0)
     }
 }
 
@@ -67,7 +75,12 @@ final class OtherDependencyMock: OtherDependencyProtocol {
 }
 
 final class NetworkServiceMock: NetworkService {
+    var fetchWithError = false
     override func fetchData() async throws -> [String] {
-        return ["hello world"]
+        if fetchWithError {
+            throw NSError(domain: "error", code: 0)
+        } else {
+            return ["hello world"]
+        }
     }
 }
